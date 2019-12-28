@@ -224,6 +224,7 @@ CentOS集成的firewall工具。ports？firewall zone？使用默认的zone-publ
 列出firewall所有打开服务与端口等信息，这一个命令就够所有查询了
 防火墙重载；永久开启http服务；永久打开80端口；永久关闭服务；永久关闭端口
 firewall规则为动态添加，改变规则后需重载，无需重启
+`systemctl status`
 
 SystemD？基本命令：列出开机启动服务；查看指定服务状态；启动/停止/重启/开机启动/开机禁用/服务。基于firewalld或docker操作
 
@@ -233,6 +234,9 @@ SystemD？基本命令：列出开机启动服务；查看指定服务状态；�
 将resources/docker-examples.war文件下载到本地，再上传到/home/用户名/services/docker-tomcat/。目录需先创建
 
 拉取最新tomcat镜像。默认暴露的端口？部署路径？集成的openjdk版本？查看镜像信息？
+
+`docker inspect tomcat`
+
 基于命令行创建一个容器：映射服务器80端口到容器的8080端口；挂载docker-examples.war所在目录到容器中的部署目录；后台运行
 查看容器是否创建/启动成功。容器中的tomcat自动在挂载目录解压war包部署
 在虚拟机添加端口，例如8888，映射虚拟机的80端口
